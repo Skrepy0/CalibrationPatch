@@ -1,0 +1,13 @@
+# Intellij Idea
+.idea
+*.sln.DotSettings.user
+
+# Compile File
+*.dll
+bin/
+obj/
+
+# Library
+packages/
+
+dist/
