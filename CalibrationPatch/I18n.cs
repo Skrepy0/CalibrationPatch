@@ -10,14 +10,29 @@ namespace CalibrationPatch
   {
     private static readonly Dictionary<string, string> en = new()
     {
+      ["language"] = "Language",
+      ["mpb"] = "ms/beat",
+      ["calibration_bpm"] = "BPM = {0}",
+      ["offset_beat"] = "Beat Offset",
+      ["mod_incompatibility_warning"] = "BetterCalibration mod detected, which may interfere with CalibrationPatch."
     };
 
     private static readonly Dictionary<string, string> zh = new()
     {
+      ["language"] = "语言",
+      ["mpb"] = "每拍毫秒数",
+      ["calibration_bpm"] = "BPM = {0}",
+      ["offset_beat"] = "偏移拍数",
+      ["mod_incompatibility_warning"] = "检测到 BetterCalibration 模组，可能影响 CalibrationPatch 的正常功能。"
     };
 
     private static readonly Dictionary<string, string> ko = new()
     {
+      ["language"] = "언어",
+      ["mpb"] = "비트당 밀리초",
+      ["calibration_bpm"] = "BPM = {0}",
+      ["offset_beat"] = "비트 오프셋",
+      ["mod_incompatibility_warning"] = "BetterCalibration 모드가 감지되었습니다. CalibrationPatch 기능에 영향을 줄 수 있습니다."
     };
 
     private static string _lang = "en";
