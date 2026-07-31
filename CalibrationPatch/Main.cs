@@ -147,10 +147,24 @@ namespace CalibrationPatch
       // --- 偏移拍数 ---
       GUILayout.BeginHorizontal();
       GUILayout.Label(I18n.Tr("offset_beat"), GUILayout.Width(150));
+
+      if (GUILayout.Button("-", GUILayout.Width(60)))
+      {
+        userOffsetBeat = Mathf.Max(-114514, userOffsetBeat - 1);
+        SaveSettings();
+      }
+
+
       string offsetBeat = GUILayout.TextField(userOffsetBeat.ToString(), GUILayout.Width(80));
       if (int.TryParse(offsetBeat, out int v) && v != userOffsetBeat)
       {
         userOffsetBeat = v;
+        SaveSettings();
+      }
+
+      if (GUILayout.Button("+", GUILayout.Width(60)))
+      {
+        userOffsetBeat = Mathf.Min(114514, userOffsetBeat + 1);
         SaveSettings();
       }
 
